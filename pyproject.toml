@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "cartoonify"
+version = "0.0.1"
+description = "Use stable diffusion to convert images of yourself to cartoons!"
+authors = ["lavaman131 <lavaalex3@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "cartoonify", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+diffusers = { git = "https://github.com/huggingface/diffusers.git" }
+transformers = ">=4.25.1"
+accelerate = ">=0.16.0"
+torchvision = "^0.17.2"
+ftfy = "^6.2.0"
+tensorboard = "^2.16.2"
+jinja2 = "^3.1.3"
+peft = "0.7.0"
+datasets = "^2.18.0"
+wandb = "^0.16.6"
+scipy = "^1.13.0"
+lightning = "^2.2.2"
+gradio = "^4.27.0"
+hf-transfer = "^0.1.6"
+# make bitsandbytes optional
+# bitsandbytes = "^0.43.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
